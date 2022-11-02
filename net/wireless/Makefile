@@ -19,6 +19,8 @@ CFLAGS_trace.o := -I$(src)
 
 ccflags-y += -D__CHECK_ENDIAN__
 
+PRODUCT_SHIPPING_API_LEVEL ?= 29
+
 ifeq ($(shell expr $(PRODUCT_SHIPPING_API_LEVEL) \>= 29),1)
 DB_VERSION = 17
 else ifeq ($(shell expr $(PRODUCT_SHIPPING_API_LEVEL) \>= 28),1)
